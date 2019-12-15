@@ -13,7 +13,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project vt-k8s
   - gcloud config set compute/zone europe-west6-a
-  - gcloud container clusters get-credentials your-first-cluster-1
+  - gcloud container clusters get-credentials standard-cluster-1
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t vitalikplus/react-test -f ./client/Dockerfile.dev ./client
 
